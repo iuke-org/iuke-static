@@ -24,9 +24,8 @@ api.renderFinished.on(() => {
 
 // track selector
 function createTrackItem(track) {
-    console.log(track);
     const trackItem = document
-        .querySelector(".at-track-template")
+        .querySelector("#at-track-template")
         .content.cloneNode(true).firstElementChild;
     trackItem.querySelector(".at-track-name").innerText = track.name;
     trackItem.track = track;
@@ -41,9 +40,9 @@ api.scoreLoaded.on((score) => {
     // clear items
     trackList.innerHTML = "";
     // generate a track item for all tracks of the score
-    score.tracks.forEach((track) => {
-        trackList.appendChild(createTrackItem(track));
-    });
+    // score.tracks.forEach((track) => {
+    //     trackList.appendChild(createTrackItem(track));
+    // });
 });
 api.renderStarted.on(() => {
     // collect tracks being rendered
