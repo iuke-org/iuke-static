@@ -24,8 +24,9 @@ api.renderFinished.on(() => {
 
 // track selector
 function createTrackItem(track) {
+    console.log(track);
     const trackItem = document
-        .querySelector("#at-track-template")
+        .querySelector(".at-track-template")
         .content.cloneNode(true).firstElementChild;
     trackItem.querySelector(".at-track-name").innerText = track.name;
     trackItem.track = track;
